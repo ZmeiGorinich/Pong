@@ -1,12 +1,12 @@
 #pragma once
-const int WINDOW_WIDTH = 800;
-const int WINDOW_HEIGHT = 600;
-const float PADDLE_SPEED = 1.0f;
-const int PADDLE_WIDTH = 45;
-const int PADDLE_HEIGHT = 190;
-const float BALL_SPEED = 0.5f;
-const int BALL_WIDTH = 16;
-const int BALL_HEIGHT = 16;
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT  600
+#define PADDLE_SPEED  1.0f
+#define PADDLE_WIDTH  45
+#define PADDLE_HEIGHT  190
+#define BALL_SPEED  0.5f
+#define BALL_WIDTH  16
+#define BALL_HEIGHT  16
 
 enum Buttons
 {

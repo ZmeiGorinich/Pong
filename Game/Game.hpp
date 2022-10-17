@@ -96,4 +96,4 @@ public:
 	}
 
 };
-typedef Singleton<GameState> TheGameState;
+typedef Singleton <GameState> TheGameState;

@@ -8,7 +8,7 @@ bool SDL_ScreenHandeler::Initialize(std::string windowName, Size windowSize)
 		printf("SDL_Init failed: %s\n", SDL_GetError());
 		return true;
 	}
-	m_Window = SDL_CreateWindow(windowName.c_str(), 10, 100, windowSize.Width, windowSize.Height, 0);
+	m_Window = SDL_CreateWindow(windowName.c_str(), 10, 50, windowSize.Width, windowSize.Height, 0);
 	m_Renderer = SDL_CreateRenderer(m_Window, -1, SDL_RENDERER_ACCELERATED);
 
 	SDL_RenderClear(m_Renderer);
