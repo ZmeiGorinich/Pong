@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Singleton">
+      <UniqueIdentifier>{75948c1d-e4fb-4dc9-9024-8896ca958e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\State">
+      <UniqueIdentifier>{d080c779-9937-4fb9-9387-57db30423b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\State">
+      <UniqueIdentifier>{71a2ffdf-e6f1-40c9-aaf8-2203b8c5f7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\SDL">
+      <UniqueIdentifier>{29891168-2559-44af-8c74-4e63908da46e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\DataTypes">
+      <UniqueIdentifier>{9bbc08a5-07b4-4dd9-aae7-130b4f8fa2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\SDL">
+      <UniqueIdentifier>{cf225f30-2287-4609-968e-d89a7d31927d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Input">
+      <UniqueIdentifier>{98b39639-c5b8-4128-b299-751316e749e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Input\KeyBoard">
+      <UniqueIdentifier>{c8f0aa9a-491e-4862-9a80-cad9bce595ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Input">
+      <UniqueIdentifier>{3e0fc945-162e-49df-b7ee-5125079ac3b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game">
+      <UniqueIdentifier>{76f26868-f547-4cac-8819-153e56f25904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Game">
+      <UniqueIdentifier>{494c41dc-c250-4aa7-8f72-52cd8d1deee0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Pong.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateManager.cpp">
+      <Filter>Исходные файлы\State</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_ScreenHandeler.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_GameStateManager.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_EventHandeler.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Image.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Timer.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardState.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_TTFFont.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Paddle.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerScore.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Singleton.hpp">
+      <Filter>Файлы заголовков\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Uncopyable.hpp">
+      <Filter>Файлы заголовков\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameState.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateManager.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameStateManager.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_ScreenHandeler.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Size.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_GameStateManager.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_EventHandeler.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Image.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle2D.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Timer.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.hpp">
+      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardState.hpp">
+      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyState.hpp">
+      <Filter>Файлы заголовков\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="IFont.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_TTFFont.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Paddle.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerScore.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="DEFINITIONS.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
