@@ -1,7 +1,7 @@
 #pragma once
 #include <SDL.h>
 
-#include "SDL_GameStateManager.hpp"
+#include "../SDL_Engine/SDL_GameStateManager.hpp"
 
 #include "Paddle.hpp"
 #include "Ball.hpp"

@@ -8,9 +8,6 @@ const float BALL_SPEED = 0.5f;
 const int BALL_WIDTH = 16;
 const int BALL_HEIGHT = 16;
 
-
-
-
 enum Buttons
 {
 	PaddleOneUp = 0,

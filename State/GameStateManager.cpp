@@ -1,5 +1,7 @@
 #include "GameStateManager.hpp"
 
+GameStateManager::GameStateManager() = default;
+
 void GameStateManager::SetState(IGameState* gs)
 {
 	if (m_CurrentState != nullptr)
@@ -14,8 +16,7 @@ void GameStateManager::SetState(IGameState* gs)
 void GameStateManager::Run()
 {
 	while (m_CurrentState != nullptr)
-	{
-		
+	{		
 		Update();
 
 		Draw();

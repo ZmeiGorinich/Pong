@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include "SDL.h"
-#include "Singleton.hpp"
-#include "Size.hpp"
+#include "../Singleton/Singleton.hpp"
+#include "../DataTypes/Size.hpp"
 class SDL_ScreenHandeler:public Uncopyable
 {
 	friend class Singleton<SDL_ScreenHandeler>;

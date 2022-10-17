@@ -1,7 +1,6 @@
 #pragma once
 
-
-#include "Singleton.hpp"
+#include "../Singleton/Singleton.hpp"
 
 class SDL_EventHandeler :public Uncopyable
 {

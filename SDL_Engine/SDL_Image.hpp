@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include "Vector2.hpp"
-#include "Size.hpp"
+#include "../DataTypes/Vector2.hpp"
+#include "../DataTypes/Size.hpp"
 struct SDL_Texture;
 
 class SDL_Image

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Singleton.hpp"
+#include "../Singleton/Singleton.hpp"
 #include "IGameState.hpp"
 
 class GameStateManager :public Uncopyable
@@ -19,7 +19,7 @@ public:
 protected:
 	IGameState* m_CurrentState = nullptr;
 
-	GameStateManager() {}
+	GameStateManager();
 	friend Singleton<GameStateManager>;
 };
 

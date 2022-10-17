@@ -1,7 +1,7 @@
-#include "SDL_GameStateManager.hpp"
-#include "SDL_Image.hpp"
-#include "SDL_Timer.hpp"
-#include "DEFINITIONS.hpp"
+#include "../SDL_Engine/SDL_GameStateManager.hpp"
+#include "../SDL_Engine/SDL_Image.hpp"
+#include "../SDL_Engine/SDL_Timer.hpp"
+#include "../DEFINITIONS.hpp"
 
 class Ball : public IGameState
 {

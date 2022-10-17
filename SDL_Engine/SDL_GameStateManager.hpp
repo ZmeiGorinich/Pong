@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "IGameStateManager.hpp" 
+#include "../State/IGameStateManager.hpp" 
 
 struct SDL_WindowEvent;
 

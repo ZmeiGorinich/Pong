@@ -2,7 +2,7 @@
 
 #include <SDL.h>
 #include "SDL_GameStateManager.hpp"
-#include "Keyboard.hpp"
+#include "../Input/Keyboard.hpp"
 
 void SDL_EventHandeler::PoolEvents()
 {

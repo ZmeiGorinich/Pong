@@ -1,8 +1,8 @@
 ﻿#include <SDL.h>
-#include "SDL_ScreenHandeler.hpp"
-#include "SDL_GameStateManager.hpp"
+#include "SDL_Engine/SDL_ScreenHandeler.hpp"
+#include "SDL_Engine/SDL_GameStateManager.hpp"
 
-#include "Game.hpp"
+#include "Game/Game.hpp"
 #include "DEFINITIONS.hpp"
 
 

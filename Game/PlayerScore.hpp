@@ -1,6 +1,6 @@
-#include "SDL_GameStateManager.hpp"
-#include "SDL_TTFFont.hpp"
-#include "DEFINITIONS.hpp"
+#include "../SDL_Engine/SDL_GameStateManager.hpp"
+#include "../SDL_Engine/SDL_TTFFont.hpp"
+#include "../DEFINITIONS.hpp"
 
 class PlayerScore : public IGameState
 {

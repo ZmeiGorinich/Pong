@@ -51,112 +51,112 @@
     <ClCompile Include="Pong.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="GameStateManager.cpp">
+    <ClCompile Include="Game/Ball.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="State/GameStateManager.cpp">
       <Filter>Исходные файлы\State</Filter>
     </ClCompile>
-    <ClCompile Include="SDL_ScreenHandeler.cpp">
-      <Filter>Исходные файлы\SDL</Filter>
-    </ClCompile>
-    <ClCompile Include="SDL_GameStateManager.cpp">
-      <Filter>Исходные файлы\SDL</Filter>
-    </ClCompile>
-    <ClCompile Include="SDL_EventHandeler.cpp">
-      <Filter>Исходные файлы\SDL</Filter>
-    </ClCompile>
-    <ClCompile Include="SDL_Image.cpp">
-      <Filter>Исходные файлы\SDL</Filter>
-    </ClCompile>
-    <ClCompile Include="SDL_Timer.cpp">
-      <Filter>Исходные файлы\SDL</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyboardState.cpp">
+    <ClCompile Include="Input/Keyboard.cpp">
       <Filter>Исходные файлы\Input</Filter>
     </ClCompile>
-    <ClCompile Include="Keyboard.cpp">
+    <ClCompile Include="Input/KeyboardState.cpp">
       <Filter>Исходные файлы\Input</Filter>
     </ClCompile>
-    <ClCompile Include="SDL_TTFFont.cpp">
+    <ClCompile Include="Game/Paddle.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game/PlayerScore.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Engine/SDL_EventHandeler.cpp">
       <Filter>Исходные файлы\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="Ball.cpp">
-      <Filter>Исходные файлы\Game</Filter>
+    <ClCompile Include="SDL_Engine/SDL_Image.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="Paddle.cpp">
-      <Filter>Исходные файлы\Game</Filter>
+    <ClCompile Include="SDL_Engine/SDL_ScreenHandeler.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerScore.cpp">
-      <Filter>Исходные файлы\Game</Filter>
+    <ClCompile Include="SDL_Engine/SDL_Timer.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Engine/SDL_GameStateManager.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Engine/SDL_TTFFont.cpp">
+      <Filter>Исходные файлы\SDL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Singleton.hpp">
-      <Filter>Файлы заголовков\Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="Uncopyable.hpp">
-      <Filter>Файлы заголовков\Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="IGameState.hpp">
-      <Filter>Файлы заголовков\State</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStateManager.hpp">
-      <Filter>Файлы заголовков\State</Filter>
-    </ClInclude>
-    <ClInclude Include="IGameStateManager.hpp">
-      <Filter>Файлы заголовков\State</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_ScreenHandeler.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="Size.hpp">
-      <Filter>Файлы заголовков\DataTypes</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.hpp">
-      <Filter>Файлы заголовков\DataTypes</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_GameStateManager.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_EventHandeler.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_Image.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle2D.hpp">
-      <Filter>Файлы заголовков\DataTypes</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_Timer.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard.hpp">
-      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyboardState.hpp">
-      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyState.hpp">
-      <Filter>Файлы заголовков\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="IFont.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="SDL_TTFFont.hpp">
-      <Filter>Файлы заголовков\SDL</Filter>
-    </ClInclude>
-    <ClInclude Include="Ball.hpp">
-      <Filter>Файлы заголовков\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.hpp">
-      <Filter>Файлы заголовков\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Paddle.hpp">
-      <Filter>Файлы заголовков\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerScore.hpp">
-      <Filter>Файлы заголовков\Game</Filter>
-    </ClInclude>
     <ClInclude Include="DEFINITIONS.hpp">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Game/Ball.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game/Game.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="State/GameStateManager.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/IFont.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="State/IGameState.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="State/IGameStateManager.hpp">
+      <Filter>Файлы заголовков\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Input/Keyboard.hpp">
+      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Input/KeyState.hpp">
+      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Input/KeyboardState.hpp">
+      <Filter>Файлы заголовков\Input\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Game/Paddle.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTypes/Rectangle2D.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game/PlayerScore.hpp">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_EventHandeler.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_GameStateManager.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_Image.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_ScreenHandeler.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_Timer.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_Engine/SDL_TTFFont.hpp">
+      <Filter>Файлы заголовков\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton/Singleton.hpp">
+      <Filter>Файлы заголовков\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton/Uncopyable.hpp">
+      <Filter>Файлы заголовков\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTypes/Vector2.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTypes/Size.hpp">
+      <Filter>Файлы заголовков\DataTypes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

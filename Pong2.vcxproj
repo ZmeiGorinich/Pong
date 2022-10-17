@@ -143,44 +143,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="GameStateManager.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="KeyboardState.cpp" />
-    <ClCompile Include="Paddle.cpp" />
-    <ClCompile Include="PlayerScore.cpp" />
+    <ClCompile Include="Game/Ball.cpp" />
+    <ClCompile Include="State/GameStateManager.cpp" />
+    <ClCompile Include="Input/Keyboard.cpp" />
+    <ClCompile Include="Input/KeyboardState.cpp" />
+    <ClCompile Include="Game/Paddle.cpp" />
+    <ClCompile Include="Game/PlayerScore.cpp" />
     <ClCompile Include="Pong.cpp" />
-    <ClCompile Include="SDL_EventHandeler.cpp" />
-    <ClCompile Include="SDL_GameStateManager.cpp" />
-    <ClCompile Include="SDL_Image.cpp" />
-    <ClCompile Include="SDL_ScreenHandeler.cpp" />
-    <ClCompile Include="SDL_Timer.cpp" />
-    <ClCompile Include="SDL_TTFFont.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_EventHandeler.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_GameStateManager.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_Image.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_ScreenHandeler.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_Timer.cpp" />
+    <ClCompile Include="SDL_Engine/SDL_TTFFont.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ball.hpp" />
+    <ClInclude Include="Game/Ball.hpp" />
     <ClInclude Include="DEFINITIONS.hpp" />
-    <ClInclude Include="Game.hpp" />
-    <ClInclude Include="GameStateManager.hpp" />
-    <ClInclude Include="IFont.hpp" />
-    <ClInclude Include="IGameState.hpp" />
-    <ClInclude Include="IGameStateManager.hpp" />
-    <ClInclude Include="Keyboard.hpp" />
-    <ClInclude Include="KeyboardState.hpp" />
-    <ClInclude Include="KeyState.hpp" />
-    <ClInclude Include="Paddle.hpp" />
-    <ClInclude Include="PlayerScore.hpp" />
-    <ClInclude Include="Rectangle2D.hpp" />
-    <ClInclude Include="SDL_EventHandeler.hpp" />
-    <ClInclude Include="SDL_GameStateManager.hpp" />
-    <ClInclude Include="SDL_Image.hpp" />
-    <ClInclude Include="SDL_ScreenHandeler.hpp" />
-    <ClInclude Include="SDL_Timer.hpp" />
-    <ClInclude Include="SDL_TTFFont.hpp" />
-    <ClInclude Include="Singleton.hpp" />
-    <ClInclude Include="Size.hpp" />
-    <ClInclude Include="Uncopyable.hpp" />
-    <ClInclude Include="Vector2.hpp" />
+    <ClInclude Include="Game/Game.hpp" />
+    <ClInclude Include="State/GameStateManager.hpp" />
+    <ClInclude Include="SDL_Engine/IFont.hpp" />
+    <ClInclude Include="State/IGameState.hpp" />
+    <ClInclude Include="State/IGameStateManager.hpp" />
+    <ClInclude Include="Input/Keyboard.hpp" />
+    <ClInclude Include="Input/KeyboardState.hpp" />
+    <ClInclude Include="Input/KeyState.hpp" />
+    <ClInclude Include="Game/Paddle.hpp" />
+    <ClInclude Include="Game/PlayerScore.hpp" />
+    <ClInclude Include="DataTypes/Rectangle2D.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_EventHandeler.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_GameStateManager.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_Image.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_ScreenHandeler.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_Timer.hpp" />
+    <ClInclude Include="SDL_Engine/SDL_TTFFont.hpp" />
+    <ClInclude Include="Singleton/Singleton.hpp" />
+    <ClInclude Include="DataTypes/Size.hpp" />
+    <ClInclude Include="Singleton/Uncopyable.hpp" />
+    <ClInclude Include="DataTypes/Vector2.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

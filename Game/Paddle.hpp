@@ -1,8 +1,8 @@
-#include "SDL_GameStateManager.hpp"
-#include "SDL_Image.hpp"
-#include "SDL_Timer.hpp"
-#include "Keyboard.hpp"
-#include "DEFINITIONS.hpp"
+#include "../SDL_Engine/SDL_GameStateManager.hpp"
+#include "../SDL_Engine/SDL_Image.hpp"
+#include "../SDL_Engine/SDL_Timer.hpp"
+#include "../Input/Keyboard.hpp"
+#include "../DEFINITIONS.hpp"
 
 class Paddle : public IGameState
 {
