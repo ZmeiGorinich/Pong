@@ -18,3 +18,4 @@ IGameState.hpp
 IGameStateManager.hpp
 GameStateManager.hpp
 GameStateManager.cpp
+## Управление платформой W S
