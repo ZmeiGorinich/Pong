@@ -6,29 +6,25 @@
 
 class Paddle : public IGameState
 {
-	friend Singleton<Paddle>;
+    friend Singleton<Paddle>;
 
-	SDL_Image img;
+    SDL_Image img;
 
-	Vector2F location;
+    Vector2F location;
 
 public:
-	
-	void SetLocation(Vector2F loc);
+    void SetLocation(Vector2F loc);
 
-	virtual void Update() override;
+    virtual void Update() override;
 
-	virtual void Draw() override;
+    virtual void Draw() override;
 
-	virtual void DeInitialize() override;
+    virtual void DeInitialize() override;
 
-	virtual void Initialize() override;
+    virtual void Initialize() override;
 
-	void UpdateAI(Vector2F ball);
+    void UpdateAI(Vector2F ball);
 
-	Contact CheckPaddleCollision(Vector2F const& ball, Vector2F const& velocity);
-
-
-
+    Contact CheckPaddleCollision(Vector2F const& ball, Vector2F const& velocity);
 };
 typedef Singleton<Paddle> ThePaddle;

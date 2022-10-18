@@ -2,7 +2,7 @@
 
 Vector2F Ball::GetBallLocation()
 {
-    return position;;
+    return position;
 }
 
 Vector2F Ball::GetBallVelocity()
@@ -21,15 +21,13 @@ void Ball::Draw()
     img.Draw(position);
 }
 
-void Ball::DeInitialize()
-{
-}
+void Ball::DeInitialize() {}
 
 void Ball::Initialize()
 {
     img.Load("Media/64-Breakout-Tiles.png");
 
-    position = { WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f };
+    position = {WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f};
 }
 
 void Ball::CollideWithPaddle(Contact const& contact)
@@ -48,8 +46,7 @@ void Ball::CollideWithPaddle(Contact const& contact)
 }
 void Ball::CollideWithWall(Contact const& contact)
 {
-    if ((contact.type == CollisionType::Top)
-        || (contact.type == CollisionType::Bottom))
+    if ((contact.type == CollisionType::Top) || (contact.type == CollisionType::Bottom))
     {
         position.Y += contact.penetration;
         velocity.Y = -velocity.Y;

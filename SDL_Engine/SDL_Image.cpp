@@ -29,12 +29,7 @@ void SDL_Image::Draw(const Vector2& Location)
     destination.w = m_TextureSize.Width;
     destination.h = m_TextureSize.Height;
 
-    SDL_RenderCopy(TheSDL_ScreenHandeler::Pointer()->GetRenderer(),
-        m_Texture,
-        NULL,
-        &destination);
+    SDL_RenderCopy(TheSDL_ScreenHandeler::Pointer()->GetRenderer(), m_Texture, NULL, &destination);
 }
 
-SDL_Image::~SDL_Image()
-{
-}
+SDL_Image::~SDL_Image() {}

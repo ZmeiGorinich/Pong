@@ -15,8 +15,7 @@ float SDL_Timer::GetDT()
 {
     float res = (m_CurrentTick - m_OldTick) / 1000.0f;
 
-    if (res > 0.2f)
-        res = 0.2f;
+    if (res > 0.2f) res = 0.2f;
 
     return res;
 }

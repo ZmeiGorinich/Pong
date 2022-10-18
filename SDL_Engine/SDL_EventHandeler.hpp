@@ -2,7 +2,7 @@
 
 #include "../Singleton/Singleton.hpp"
 
-class SDL_EventHandeler :public Uncopyable
+class SDL_EventHandeler : public Uncopyable
 {
     friend Singleton<SDL_EventHandeler>;
 

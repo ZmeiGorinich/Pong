@@ -4,25 +4,25 @@
 
 class PlayerScore : public IGameState
 {
-	friend Singleton<PlayerScore>;
+    friend Singleton<PlayerScore>;
 
-	Vector2F position;
+    Vector2F position;
 
-	SDL_TTFFont font;
+    SDL_TTFFont font;
 
-	int score = 0;
+    int score = 0;
+
 public:
+    void Update() override;
 
-	void Update() override;
+    void Draw() override;
 
-	void Draw() override;
+    void DeInitialize() override;
 
-	void DeInitialize() override;
+    void Initialize() override;
 
-	void Initialize() override;
+    void SetScore();
 
-	void SetScore();
-
-	void SetPosition(Vector2F pos);
+    void SetPosition(Vector2F pos);
 };
 typedef Singleton<PlayerScore> ThePlayerScore;

@@ -5,32 +5,29 @@
 
 class Ball : public IGameState
 {
-	friend Singleton<Ball>;
+    friend Singleton<Ball>;
 
-	SDL_Image img;	
-	Vector2F position;
-	Vector2F velocity{ BALL_SPEED, 0.0f };
-
+    SDL_Image img;
+    Vector2F position;
+    Vector2F velocity{BALL_SPEED, 0.0f};
 
 public:
-	
-	Vector2F GetBallLocation();
-	
-	Vector2F GetBallVelocity();	
+    Vector2F GetBallLocation();
 
-	void Update() override;
+    Vector2F GetBallVelocity();
 
-	void Draw() override;
+    void Update() override;
 
-	void DeInitialize() override;
+    void Draw() override;
 
-	void Initialize() override;
-	
-	void CollideWithPaddle(Contact const& contact);
+    void DeInitialize() override;
 
-	void CollideWithWall(Contact const& contact);
-	
-	Contact CheckWallCollision();
+    void Initialize() override;
 
+    void CollideWithPaddle(Contact const& contact);
+
+    void CollideWithWall(Contact const& contact);
+
+    Contact CheckWallCollision();
 };
 typedef Singleton<Ball> TheBall;

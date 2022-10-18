@@ -1,6 +1,6 @@
 #pragma once
 
-template<class T>
+template <class T>
 class SizeT
 {
 
@@ -11,8 +11,8 @@ public:
     SizeT() {}
     SizeT(T width, T height) : Width(width), Height(height) {}
 
-    //typecast
-    template<class T2>
+    // typecast
+    template <class T2>
     operator SizeT<T2>()
     {
         SizeT<T2> res;
@@ -22,22 +22,22 @@ public:
     }
 
     // ==
-    template<class T2>
-    bool operator == (const SizeT<T2> b)
+    template <class T2>
+    bool operator==(const SizeT<T2> b)
     {
         return Width == b.Width && Height == b.Height;
     }
 
     // !=
-    template<class T2>
-    bool operator != (const SizeT<T2> b)
+    template <class T2>
+    bool operator!=(const SizeT<T2> b)
     {
         return Width != b.Width && Height != b.Height;
     }
 
     // +
-    template<class T2>
-    SizeT operator + (const SizeT<T2> b)
+    template <class T2>
+    SizeT operator+(const SizeT<T2> b)
     {
         SizeT<T2> res = *this;
         res.Width += static_cast<T2>(Width);
@@ -45,16 +45,16 @@ public:
         return res;
     }
 
-    template<class T2>
-    void operator += (const SizeT<T2> b)
+    template <class T2>
+    void operator+=(const SizeT<T2> b)
     {
         Width += static_cast<T>(b.Width);
         Height += static_cast<T>(b.Height);
     }
 
     // -
-    template<class T2>
-    SizeT operator - (const SizeT<T2> b)
+    template <class T2>
+    SizeT operator-(const SizeT<T2> b)
     {
         SizeT<T2> res = *this;
         res.Width -= static_cast<T2>(Width);
@@ -62,8 +62,8 @@ public:
         return res;
     }
 
-    template<class T2>
-    void operator -= (const SizeT<T2> b)
+    template <class T2>
+    void operator-=(const SizeT<T2> b)
     {
         Width -= static_cast<T>(b.Width);
         Height -= static_cast<T>(b.Height);
@@ -72,10 +72,7 @@ public:
     // *
     // *=
 
-    bool IsZero() const
-    {
-        return Width == 0 && Height == 0;
-    }
+    bool IsZero() const { return Width == 0 && Height == 0; }
 };
 
 typedef SizeT<int> Size;

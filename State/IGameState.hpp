@@ -13,6 +13,4 @@ public:
     virtual void Draw() = 0;
 
     virtual void DeInitialize() = 0;
-
 };
-

@@ -1,6 +1,5 @@
 #include "Paddle.hpp"
 
-
 void Paddle::SetLocation(Vector2F loc)
 {
     location = loc;
@@ -35,9 +34,7 @@ void Paddle::Draw()
     img.Draw(location);
 }
 
-void Paddle::DeInitialize()
-{
-}
+void Paddle::DeInitialize() {}
 
 void Paddle::Initialize()
 {
@@ -65,7 +62,6 @@ void Paddle::UpdateAI(Vector2F ball)
         {
             location.Y += 0.25;
         }
-
     }
 }
 
@@ -117,13 +113,11 @@ Contact Paddle::CheckPaddleCollision(Vector2F const& ball, Vector2F const& veloc
         contact.penetration = paddleLeft - ballRight;
     }
 
-    if ((ballBottom > paddleTop)
-        && (ballBottom < paddleRangeUpper))
+    if ((ballBottom > paddleTop) && (ballBottom < paddleRangeUpper))
     {
         contact.type = CollisionType::Top;
     }
-    else if ((ballBottom > paddleRangeUpper)
-        && (ballBottom < paddleRangeMiddle))
+    else if ((ballBottom > paddleRangeUpper) && (ballBottom < paddleRangeMiddle))
     {
         contact.type = CollisionType::Middle;
     }

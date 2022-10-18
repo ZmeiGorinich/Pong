@@ -3,7 +3,7 @@
 #include "../Singleton/Singleton.hpp"
 #include "IGameState.hpp"
 
-class GameStateManager :public Uncopyable
+class GameStateManager : public Uncopyable
 {
 public:
     IGameState* GetState() { return m_CurrentState; }
@@ -23,4 +23,4 @@ protected:
     friend Singleton<GameStateManager>;
 };
 
-typedef  Singleton<GameStateManager> TheGameStateManager;
+typedef Singleton<GameStateManager> TheGameStateManager;

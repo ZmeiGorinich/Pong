@@ -3,7 +3,7 @@
 #include "SDL.h"
 #include "../Singleton/Singleton.hpp"
 #include "../DataTypes/Size.hpp"
-class SDL_ScreenHandeler :public Uncopyable
+class SDL_ScreenHandeler : public Uncopyable
 {
     friend class Singleton<SDL_ScreenHandeler>;
     SDL_ScreenHandeler();
@@ -12,6 +12,7 @@ class SDL_ScreenHandeler :public Uncopyable
     SDL_Renderer* m_Renderer = nullptr;
 
     SDL_Color m_BackBufferColor;
+
 public:
     bool Initialize(std::string, Size windowSize);
     void SetBackBufferColor(SDL_Color color);
@@ -20,7 +21,6 @@ public:
     SDL_Renderer* GetRenderer();
 
     ~SDL_ScreenHandeler();
-
 };
 
 typedef Singleton<SDL_ScreenHandeler> TheSDL_ScreenHandeler;

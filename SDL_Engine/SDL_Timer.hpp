@@ -9,6 +9,5 @@ class SDL_Timer
     static void UpdateTimer();
 
 public:
-
     static float GetDT();
 };

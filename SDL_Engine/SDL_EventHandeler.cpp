@@ -14,12 +14,9 @@ void SDL_EventHandeler::PoolEvents()
     {
         switch (event.type)
         {
-        case SDL_WINDOWEVENT:
-            TheSDLGameStateManager::Pointer()->HandelEvent(&event.window);
-        case SDL_KEYUP:;
-        case SDL_KEYDOWN:Keyboard::HandelEvent(&event.key); break;
-
+            case SDL_WINDOWEVENT: TheSDLGameStateManager::Pointer()->HandelEvent(&event.window);
+            case SDL_KEYUP:;
+            case SDL_KEYDOWN: Keyboard::HandelEvent(&event.key); break;
         }
-
     }
 }

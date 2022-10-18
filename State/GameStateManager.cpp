@@ -2,7 +2,7 @@
 
 GameStateManager::GameStateManager() = default;
 
-void GameStateManager::SetState(IGameState * gs)
+void GameStateManager::SetState(IGameState* gs)
 {
     if (m_CurrentState != nullptr)
     {

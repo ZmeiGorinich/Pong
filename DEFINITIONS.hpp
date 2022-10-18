@@ -16,7 +16,6 @@ enum Buttons
     PaddleTwoDown,
 };
 
-
 enum class CollisionType
 {
     None,
@@ -26,7 +25,6 @@ enum class CollisionType
     Left,
     Right
 };
-
 
 struct Contact
 {

@@ -3,7 +3,7 @@
 #include "Size.hpp"
 #include "Vector2.hpp"
 
-template<class T>
+template <class T>
 class RectangleT
 {
 public:
@@ -16,8 +16,8 @@ public:
     RectangleT(T x, T y, T width, T height) : X(x), Y(y), Width(width), Height(height) {}
     RectangleT(SizeT<T> size) : Width(size.Width), Height(size.Height) {}
 
-    //typecast
-    template<class T2>
+    // typecast
+    template <class T2>
     operator RectangleT<T2>()
     {
         RectangleT<T2> res;
@@ -29,22 +29,22 @@ public:
     }
 
     // ==
-    template<class T2>
-    bool operator == (const RectangleT<T2> b)
+    template <class T2>
+    bool operator==(const RectangleT<T2> b)
     {
         return X == b.X && Y == b.Y && Width == b.Width && Height == b.Height;
     }
 
     // !=
-    template<class T2>
-    bool operator != (const RectangleT<T2> b)
+    template <class T2>
+    bool operator!=(const RectangleT<T2> b)
     {
-        return  X != b.X && Y != b.Y && Width != b.Width && Height != b.Height;
+        return X != b.X && Y != b.Y && Width != b.Width && Height != b.Height;
     }
 
     // +
-    template<class T2>
-    RectangleT operator + (const RectangleT<T2> b)
+    template <class T2>
+    RectangleT operator+(const RectangleT<T2> b)
     {
         RectangleT<T2> res = *this;
         res.X += static_cast<T2>(X);
@@ -54,8 +54,8 @@ public:
         return res;
     }
 
-    template<class T2>
-    void operator += (const RectangleT<T2> b)
+    template <class T2>
+    void operator+=(const RectangleT<T2> b)
     {
         X += static_cast<T2>(b.X);
         Y += static_cast<T2>(b.Y);
@@ -64,8 +64,8 @@ public:
     }
 
     // -
-    template<class T2>
-    RectangleT operator - (const RectangleT<T2> b)
+    template <class T2>
+    RectangleT operator-(const RectangleT<T2> b)
     {
         RectangleT<T2> res = *this;
         res.X -= static_cast<T2>(X);
@@ -75,8 +75,8 @@ public:
         return res;
     }
 
-    template<class T2>
-    void operator -= (const RectangleT<T2> b)
+    template <class T2>
+    void operator-=(const RectangleT<T2> b)
     {
         X -= static_cast<T2>(b.X);
         Y -= static_cast<T2>(b.Y);
@@ -112,30 +112,17 @@ public:
         Y += static_cast<T>(OffsetAmount.Y);
     }
 
-    T Left() const
-    {
-        return X;
-    }
+    T Left() const { return X; }
 
-    T Right() const
-    {
-        return X + Width;
-    }
+    T Right() const { return X + Width; }
 
-    T Top() const
-    {
-        return Y;
-    }
+    T Top() const { return Y; }
 
-    T Bottom() const
-    {
-        return Y + Height;
-    }
+    T Bottom() const { return Y + Height; }
 
     bool Contains(Vector2T<T> location) const
     {
-        return (Left() < location.X && location.X < Right() &&
-            Top() < location.Y&& location.Y < Bottom());
+        return (Left() < location.X && location.X < Right() && Top() < location.Y && location.Y < Bottom());
     }
 
     bool Contains(RectangleT<T> rectB) const
@@ -148,8 +135,7 @@ public:
 
     bool IntersectsWith(const RectangleT<T> rectB) const
     {
-        return (Right() > rectB.Left() && rectB.Right() > Left() &&
-            Top() < rectB.Bottom() && rectB.Top() < Bottom());
+        return (Right() > rectB.Left() && rectB.Right() > Left() && Top() < rectB.Bottom() && rectB.Top() < Bottom());
     }
 };
 
