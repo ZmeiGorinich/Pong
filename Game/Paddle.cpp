@@ -11,21 +11,23 @@ void Paddle::Update()
 
     if (state.IsKeyDown(Keys::w))
     {
-        location.Y -= SDL_Timer::GetDT() * 1000;
+        // location.Y -= SDL_Timer::GetDT() * 1000;
+        location.SetYMinus(SDL_Timer::GetDT() * 1000);
     }
 
     if (state.IsKeyDown(Keys::s))
     {
-        location.Y += SDL_Timer::GetDT() * 1000;
+        // location.Y += SDL_Timer::GetDT() * 1000;
+        location.SetYPlus(SDL_Timer::GetDT() * 1000);
     }
 
-    if (location.Y < 0)
+    if (location.GetY() < 0)
     {
-        location.Y = 0;
+        location.SetY(0);
     }
-    else if (location.Y > (WINDOW_HEIGHT - PADDLE_HEIGHT))
+    else if (location.GetY() > (WINDOW_HEIGHT - PADDLE_HEIGHT))
     {
-        location.Y = WINDOW_HEIGHT - PADDLE_HEIGHT;
+        location.SetY(WINDOW_HEIGHT - PADDLE_HEIGHT);
     }
 }
 
@@ -43,39 +45,39 @@ void Paddle::Initialize()
 
 void Paddle::UpdateAI(Vector2F ball)
 {
-    if (location.Y < 0)
+    if (location.GetY() < 0)
     {
-        location.Y = 0;
+        location.SetY(0);
     }
-    else if (location.Y > (WINDOW_HEIGHT - PADDLE_HEIGHT))
+    else if (location.GetY() > (WINDOW_HEIGHT - PADDLE_HEIGHT))
     {
-        location.Y = WINDOW_HEIGHT - PADDLE_HEIGHT;
+        location.SetY(WINDOW_HEIGHT - PADDLE_HEIGHT);
     }
 
-    if (ball.X > WINDOW_WIDTH / 2)
+    if (ball.GetX() > WINDOW_WIDTH / 2)
     {
-        if (ball.Y < location.Y + PADDLE_HEIGHT / 2)
+        if (ball.GetY() < location.GetY() + PADDLE_HEIGHT / 2)
         {
-            location.Y += -0.25;
+            location.SetYPlus(-0.25);
         }
-        if (ball.Y + BALL_HEIGHT > location.Y + PADDLE_HEIGHT / 2)
+        if (ball.GetY() + BALL_HEIGHT > location.GetY() + PADDLE_HEIGHT / 2)
         {
-            location.Y += 0.25;
+            location.SetYPlus(0.25);
         }
     }
 }
 
 Contact Paddle::CheckPaddleCollision(Vector2F const& ball, Vector2F const& velocity)
 {
-    float ballLeft = ball.X;
-    float ballRight = ball.X + BALL_WIDTH;
-    float ballTop = ball.Y;
-    float ballBottom = ball.Y + BALL_HEIGHT;
+    float ballLeft = ball.GetX();
+    float ballRight = ball.GetX() + BALL_WIDTH;
+    float ballTop = ball.GetY();
+    float ballBottom = ball.GetY() + BALL_HEIGHT;
 
-    float paddleLeft = this->location.X;
-    float paddleRight = this->location.X + PADDLE_WIDTH;
-    float paddleTop = this->location.Y;
-    float paddleBottom = this->location.Y + PADDLE_HEIGHT;
+    float paddleLeft = this->location.GetX();
+    float paddleRight = this->location.GetX() + PADDLE_WIDTH;
+    float paddleTop = this->location.GetY();
+    float paddleBottom = this->location.GetY() + PADDLE_HEIGHT;
 
     Contact contact{};
 
@@ -102,12 +104,12 @@ Contact Paddle::CheckPaddleCollision(Vector2F const& ball, Vector2F const& veloc
     float paddleRangeUpper = paddleBottom - (2.0f * PADDLE_HEIGHT / 3.0f);
     float paddleRangeMiddle = paddleBottom - (PADDLE_HEIGHT / 3.0f);
 
-    if (velocity.X < 0)
+    if (velocity.GetX() < 0)
     {
         // Left paddle
         contact.penetration = paddleRight - ballLeft;
     }
-    else if (velocity.X > 0)
+    else if (velocity.GetX() > 0)
     {
         // Right paddle
         contact.penetration = paddleLeft - ballRight;

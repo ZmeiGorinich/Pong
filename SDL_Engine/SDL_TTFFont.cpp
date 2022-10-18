@@ -77,14 +77,14 @@ void SDL_TTFFont::DrawString(std::string string, Vector2 location)
         SDL_Rect source{(int)letter.X, (int)letter.Y, (int)letter.Width, (int)letter.Height};
 
         SDL_Rect destination;
-        destination.x = (int)loc.X;
-        destination.y = (int)loc.Y;
+        destination.x = (int)loc.GetX();
+        destination.y = (int)loc.GetY();
         destination.w = source.w;
         destination.h = source.h;
 
         SDL_RenderCopy(TheSDL_ScreenHandeler::Pointer()->GetRenderer(), m_Texture, &source, &destination);
 
-        loc.X += letter.Width;
+        loc.SetXPlus(letter.Width);
     }
 }
 

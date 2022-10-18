@@ -12,8 +12,8 @@ Vector2F Ball::GetBallVelocity()
 
 void Ball::Update()
 {
-    position.X += velocity.X * SDL_Timer::GetDT() * 1000;
-    position.Y += velocity.Y * SDL_Timer::GetDT() * 1000;
+    position.SetXPlus(velocity.GetX() * SDL_Timer::GetDT() * 1000);
+    position.SetYPlus(velocity.GetY() * SDL_Timer::GetDT() * 1000);
 }
 
 void Ball::Draw()
@@ -32,46 +32,46 @@ void Ball::Initialize()
 
 void Ball::CollideWithPaddle(Contact const& contact)
 {
-    position.X += contact.penetration;
-    velocity.X = -velocity.X;
+    position.SetXPlus(contact.penetration);
+    velocity.SetX(-velocity.GetX());
 
     if (contact.type == CollisionType::Top)
     {
-        velocity.Y = -.75f * BALL_SPEED;
+        velocity.SetY(-.75f * BALL_SPEED);
     }
     else if (contact.type == CollisionType::Bottom)
     {
-        velocity.Y = 0.75f * BALL_SPEED;
+        velocity.SetY(0.75f * BALL_SPEED);
     }
 }
 void Ball::CollideWithWall(Contact const& contact)
 {
     if ((contact.type == CollisionType::Top) || (contact.type == CollisionType::Bottom))
     {
-        position.Y += contact.penetration;
-        velocity.Y = -velocity.Y;
+        position.SetYPlus(contact.penetration);
+        velocity.SetY(-velocity.GetY());
     }
     else if (contact.type == CollisionType::Left)
     {
-        position.X = WINDOW_WIDTH / 2.0f;
-        position.Y = WINDOW_HEIGHT / 2.0f;
-        velocity.X = BALL_SPEED;
-        velocity.Y = 0.75f * BALL_SPEED;
+        position.SetX(WINDOW_WIDTH / 2.0f);
+        position.SetY(WINDOW_HEIGHT / 2.0f);
+        velocity.SetX(BALL_SPEED);
+        velocity.SetY(0.75f * BALL_SPEED);
     }
     else if (contact.type == CollisionType::Right)
     {
-        position.X = WINDOW_WIDTH / 2.0f;
-        position.Y = WINDOW_HEIGHT / 2.0f;
-        velocity.X = -BALL_SPEED;
-        velocity.Y = 0.75f * BALL_SPEED;
+        position.SetX(WINDOW_WIDTH / 2.0f);
+        position.SetY(WINDOW_HEIGHT / 2.0f);
+        velocity.SetX(-BALL_SPEED);
+        velocity.SetY(0.75f * BALL_SPEED);
     }
 }
 Contact Ball::CheckWallCollision()
 {
-    float ballLeft = this->position.X;
-    float ballRight = this->position.X + BALL_WIDTH;
-    float ballTop = this->position.Y;
-    float ballBottom = this->position.Y + BALL_HEIGHT;
+    float ballLeft = this->position.GetX();
+    float ballRight = this->position.GetX() + BALL_WIDTH;
+    float ballTop = this->position.GetY();
+    float ballBottom = this->position.GetY() + BALL_HEIGHT;
 
     Contact contact{};
 

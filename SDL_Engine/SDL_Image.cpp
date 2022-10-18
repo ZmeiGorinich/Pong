@@ -24,8 +24,8 @@ bool SDL_Image::Load(const std::string& File)
 void SDL_Image::Draw(const Vector2& Location)
 {
     SDL_Rect destination;
-    destination.x = Location.X;
-    destination.y = Location.Y;
+    destination.x = Location.GetX();
+    destination.y = Location.GetY();
     destination.w = m_TextureSize.Width;
     destination.h = m_TextureSize.Height;
 
