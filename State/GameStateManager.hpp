@@ -6,21 +6,21 @@
 class GameStateManager :public Uncopyable
 {
 public:
-	IGameState* GetState() { return m_CurrentState; }
+    IGameState* GetState() { return m_CurrentState; }
 
-	void SetState(IGameState* gs);
+    void SetState(IGameState* gs);
 
-	virtual void Run();
+    virtual void Run();
 
-	virtual void Update();
+    virtual void Update();
 
-	virtual void Draw();
+    virtual void Draw();
 
 protected:
-	IGameState* m_CurrentState = nullptr;
+    IGameState* m_CurrentState = nullptr;
 
-	GameStateManager();
-	friend Singleton<GameStateManager>;
+    GameStateManager();
+    friend Singleton<GameStateManager>;
 };
 
 typedef  Singleton<GameStateManager> TheGameStateManager;

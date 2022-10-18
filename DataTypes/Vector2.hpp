@@ -16,8 +16,8 @@ public:
 	operator Vector2T<T2>()
 	{
 		Vector2T<T2> res;
-		res.X = (T2)X;
-		res.Y = (T2)Y;
+		res.X = static_cast<T2>(X);
+		res.Y = static_cast<T2>(Y);
 		return res;
 	}
 
@@ -40,16 +40,16 @@ public:
 	Vector2T operator + (const Vector2T<T2> b)
 	{
 		Vector2T<T2> res = *this;
-		res.X += (T2)X;
-		res.Y += (T2)Y;
+		res.X += static_cast<T2>(X);
+		res.Y += static_cast<T2>(Y);
 		return res;
 	}
 
 	template<class T2>
 	void operator += (const Vector2T<T2> b)
 	{
-		X += (T2)b.X;
-		Y += (T2)b.Y;
+		X += static_cast<T2>(b.X);
+		Y += static_cast<T2>(b.Y);
 	}
 
 	// -
@@ -57,16 +57,16 @@ public:
 	Vector2T operator - (const Vector2T<T2> b)
 	{
 		Vector2T<T2> res = *this;
-		res.X -= (T2)X;
-		res.Y -= (T2)Y;
+		res.X -= static_cast<T2>(X);
+		res.Y -= static_cast<T2>(Y);
 		return res;
 	}
 
 	template<class T2>
 	void operator -= (const Vector2T<T2> b)
 	{
-		X -= (T2)b.X;
-		Y -= (T2)b.Y;
+		X -= static_cast<T2>(b.X);
+		Y -= static_cast<T2>(b.Y);
 	}
 
 	// *
@@ -103,12 +103,12 @@ public:
 		Y /= scalar;
 	}
 
-	float Length() const
+	T Length() const
 	{
 		return sqrtf(LengthSquared);
 	}
 
-	float LengthSquared() const
+	T LengthSquared() const
 	{
 		return (X * X) + (Y * Y);
 	}

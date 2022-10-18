@@ -4,13 +4,12 @@
 
 class SDL_EventHandeler :public Uncopyable
 {
-	friend Singleton<SDL_EventHandeler>;
+    friend Singleton<SDL_EventHandeler>;
 
-	SDL_EventHandeler() {}
-
+    SDL_EventHandeler();
 
 public:
-	void PoolEvents();
+    void PoolEvents();
 };
 
 typedef Singleton<SDL_EventHandeler> TheSDLEventHandeler;

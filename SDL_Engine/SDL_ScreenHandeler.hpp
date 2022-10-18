@@ -3,23 +3,23 @@
 #include "SDL.h"
 #include "../Singleton/Singleton.hpp"
 #include "../DataTypes/Size.hpp"
-class SDL_ScreenHandeler:public Uncopyable
+class SDL_ScreenHandeler :public Uncopyable
 {
-	friend class Singleton<SDL_ScreenHandeler>;
-	SDL_ScreenHandeler() {};
+    friend class Singleton<SDL_ScreenHandeler>;
+    SDL_ScreenHandeler();
 
-	SDL_Window* m_Window = nullptr;
-	SDL_Renderer* m_Renderer = nullptr;
+    SDL_Window* m_Window = nullptr;
+    SDL_Renderer* m_Renderer = nullptr;
 
-	SDL_Color m_BackBufferColor;
+    SDL_Color m_BackBufferColor;
 public:
-	bool Initialize(std::string,Size windowSize);
-	void SetBackBufferColor(SDL_Color color);
-	void Flip();
+    bool Initialize(std::string, Size windowSize);
+    void SetBackBufferColor(SDL_Color color);
+    void Flip();
 
-	SDL_Renderer* GetRenderer();
+    SDL_Renderer* GetRenderer();
 
-	~SDL_ScreenHandeler();
+    ~SDL_ScreenHandeler();
 
 };
 

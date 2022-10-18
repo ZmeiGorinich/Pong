@@ -13,13 +13,13 @@ class PlayerScore : public IGameState
 	int score = 0;
 public:
 
-	virtual void Update() override;
+	void Update() override;
 
-	virtual void Draw() override;
+	void Draw() override;
 
-	virtual void DeInitialize() override;
+	void DeInitialize() override;
 
-	virtual void Initialize();
+	void Initialize() override;
 
 	void SetScore();
 

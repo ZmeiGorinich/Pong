@@ -11,7 +11,7 @@
 class GameState : public IGameState
 {
 	friend Singleton<GameState>;
-	GameState() {};
+	GameState() {}
 
 	Ball ball;
 	Paddle paddle;
@@ -22,7 +22,7 @@ class GameState : public IGameState
 
 public:
 
-	virtual void Update() override
+	void Update() override
 	{
 
 		ball.Update();
@@ -63,7 +63,7 @@ public:
 
 	}
 
-	virtual void Draw() override
+	void Draw() override
 	{
 		ball.Draw();
 		paddle.Draw();
@@ -73,11 +73,11 @@ public:
 
 	}
 
-	virtual void DeInitialize() override
+	void DeInitialize() override
 	{
 	}
 
-	virtual void Initialize()
+	void Initialize() override
 	{
 		ball.Initialize();
 

@@ -2,6 +2,6 @@
 
 enum class KeyState
 {
-	Released = 0,
-	Pressed = 1
+    Released = 0,
+    Pressed = 1
 };

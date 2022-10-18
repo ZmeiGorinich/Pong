@@ -1,11 +1,11 @@
 #pragma once
 class Uncopyable {
 private:
-	Uncopyable(const Uncopyable& uc);
+    Uncopyable(const Uncopyable& uc);
 
-	const Uncopyable& operator=(const Uncopyable);
+    const Uncopyable& operator=(const Uncopyable);
 
 
 protected:
-	Uncopyable() {}
+    Uncopyable() {}
 };

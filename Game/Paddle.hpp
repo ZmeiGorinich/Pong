@@ -22,7 +22,7 @@ public:
 
 	virtual void DeInitialize() override;
 
-	virtual void Initialize();
+	virtual void Initialize() override;
 
 	void UpdateAI(Vector2F ball);
 

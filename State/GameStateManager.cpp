@@ -2,39 +2,39 @@
 
 GameStateManager::GameStateManager() = default;
 
-void GameStateManager::SetState(IGameState* gs)
+void GameStateManager::SetState(IGameState * gs)
 {
-	if (m_CurrentState != nullptr)
-	{
-		m_CurrentState->DeInitialize();
-	}
-	if (gs != nullptr) gs->Initialize();
+    if (m_CurrentState != nullptr)
+    {
+        m_CurrentState->DeInitialize();
+    }
+    if (gs != nullptr) gs->Initialize();
 
-	m_CurrentState = gs;
+    m_CurrentState = gs;
 }
 
 void GameStateManager::Run()
 {
-	while (m_CurrentState != nullptr)
-	{		
-		Update();
+    while (m_CurrentState != nullptr)
+    {
+        Update();
 
-		Draw();
-	}
+        Draw();
+    }
 }
 
 void GameStateManager::Update()
 {
-	if (m_CurrentState != nullptr)
-	{
-		m_CurrentState->Update();
-	}
+    if (m_CurrentState != nullptr)
+    {
+        m_CurrentState->Update();
+    }
 }
 
 void GameStateManager::Draw()
 {
-	if (m_CurrentState != nullptr)
-	{
-		m_CurrentState->Draw();
-	}
+    if (m_CurrentState != nullptr)
+    {
+        m_CurrentState->Draw();
+    }
 }

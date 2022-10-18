@@ -18,13 +18,13 @@ public:
 	
 	Vector2F GetBallVelocity();	
 
-	virtual void Update() override;
+	void Update() override;
 
-	virtual void Draw() override;
+	void Draw() override;
 
-	virtual void DeInitialize() override;
+	void DeInitialize() override;
 
-	virtual void Initialize();
+	void Initialize() override;
 	
 	void CollideWithPaddle(Contact const& contact);
 

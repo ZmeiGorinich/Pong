@@ -5,10 +5,12 @@
 #include "SDL_ScreenHandeler.hpp"
 #include "SDL_Timer.hpp"
 
-void SDL_GameStateManager::HandelEvent(SDL_WindowEvent* winEvent)
+SDL_GameStateManager::SDL_GameStateManager() = default;
+
+void SDL_GameStateManager::HandelEvent(SDL_WindowEvent * winEvent)
 {
     switch (winEvent->event) {
-	case SDL_WINDOWEVENT_SHOWN:
+    case SDL_WINDOWEVENT_SHOWN:
         SDL_Log("Window %d shown", winEvent->windowID);
         break;
     case SDL_WINDOWEVENT_HIDDEN:
@@ -71,22 +73,22 @@ void SDL_GameStateManager::HandelEvent(SDL_WindowEvent* winEvent)
         SDL_Log("Window %d got unknown event %d",
             winEvent->windowID, winEvent->event);
         break;
-}
+    }
 }
 
 void SDL_GameStateManager::Update()
 {
     SDL_Timer::UpdateTimer();
 
-	TheSDLEventHandeler::Pointer()->PoolEvents();
+    TheSDLEventHandeler::Pointer()->PoolEvents();
 
 
-	GameStateManager::Update();
+    GameStateManager::Update();
 
 }
 
 void SDL_GameStateManager::Draw()
 {
-	GameStateManager::Draw();
-	TheSDL_ScreenHandeler::Pointer()->Flip();
+    GameStateManager::Draw();
+    TheSDL_ScreenHandeler::Pointer()->Flip();
 }

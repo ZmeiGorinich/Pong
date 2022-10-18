@@ -2,8 +2,8 @@
 
 bool KeyboardState::IsKeyDown(Keys key)
 {
-	if (m_KeyData[key] == KeyState::Pressed)
-		return true;
+    if (m_KeyData[key] == KeyState::Pressed)
+        return true;
 
-	return false;
+    return false;
 }
